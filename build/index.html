@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Music Player By OD-tech</title>
+</head>
+
+<body class="h-screen p-2">
+    <div class="wrapper rounded-2xl w-80 h-fit text-center pt-4 pb-1 ms-auto me-auto">
+        <header class="flex justify-between items-center text-center ps-8 pe-8">
+            <button class="hdbtn w-10 h-10 leading-10 rounded-full transition-all">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </button>
+            <h3 class="p-now text-sm uppercase font-bold">Playing Now</h3>
+            <button class="hdbtn w-10 h-10 leading-10 rounded-full transition-all">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
+        </header>
+
+        <div class="player mt-1">
+
+            <div class="img-area grid place-content-center ps-8 pe-8">
+                <img src="" alt="" class="w-48 h-48 mb-4 object-cover rounded-full">
+            </div>
+
+            <div class="song-details ps-8 pe-8">
+                <h1 class="name text-xl capitalize font-bold"></h1>
+                <h3 class="artist text-xs capitalize pt-3 pb-1 font-bold"></h3>
+            </div>
+
+            <div class="audioC ps-8 pe-8 mt-1 mb-1">
+                <div class="song-timer flex justify-between items-center text-center mb-5">
+                    <span class="current-time text-xs select-none font-extrabold">0:00</span>
+                    <span class="max-duration text-xs select-none font-extrabold">0:00</span>
+                </div>
+                <div class="progress-area h-2 w-full mt-4 rounded-full cursor-pointer">
+                    <div
+                        class="progress-bar">
+                        <audio id="main-audio" src=""></audio>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls flex justify-between items-center text-center mt-10 ms-2 me-2">
+                <button id="random" class="btnC w-12 h-12 rounded-full transition-all">
+                    <i class="fa fa-random text-sm select-none flex cursor-pointer items-center justify-around"
+                        aria-hidden="true"></i>
+                </button>
+                <button id="prev" class="btnC w-12 h-12 rounded-full transition-all">
+                    <i class="fa fa-backward select-none flex cursor-pointer items-center justify-around"
+                        aria-hidden="true"></i>
+                </button>
+                <button class="play-pause btnC rounded-full transition-all w-14 h-14  flex cursor-pointer items-center justify-center">
+                    <i class="fa fa-play select-none flex cursor-pointer items-center justify-around text-center text-white "
+                        aria-hidden="true"></i>
+                </button>
+                <button id="next" class="btnC w-12 h-12 rounded-full transition-all">
+                    <i class="fa fa-forward select-none flex cursor-pointer items-center justify-around"
+                        aria-hidden="true"></i>
+                </button>
+                <button id="repeat" class="btnC w-12 h-12 rounded-full transition-all">
+                    <i class="fa fa-repeat select-none flex cursor-pointer items-center justify-around"
+                        aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <div id="wave" class="mt-12 mb-7">
+                <span class="stroke animate-wave"></span>
+                <span class="stroke animate-wave"></span>
+                <span class="stroke animate-wave"></span>
+                <span class="stroke animate-wave"></span>
+                <span class="stroke animate-wave"></span>
+                <span class="stroke animate-wave"></span>
+                <span class="stroke animate-wave"></span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
